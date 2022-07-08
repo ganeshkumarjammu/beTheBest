@@ -1,6 +1,5 @@
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
-#include <SPI.h>
 #include <Wire.h> 
 LiquidCrystal_I2C display(0x27, 16, 2);
 Servo myservo ;
@@ -39,8 +38,8 @@ int measureDistance(int trigPin, int echoPin){
   
 void setup() {
   Serial.begin(9600);
-  pinMode(buzzerPin, OUTPUT); // declare piezo as output  
-  pinMode(trigPin1, OUTPUT);
+ 
+ pinMode(trigPin1, OUTPUT);
   pinMode(echoPin1, INPUT);
   pinMode(trigPin2, OUTPUT);
   pinMode(echoPin2, INPUT); 
